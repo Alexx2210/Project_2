@@ -5,6 +5,7 @@ import '../styles/App.css';
 
 import '../styles/App.css';
 
+
 function App() {
 
     const API_URL="https://api.themoviedb.org/3/movie/popular?api_key=ead762915fa943d470035bcf89cf913e";
@@ -20,10 +21,15 @@ function App() {
     }, [])
 
         return (
+            <main>
+                <header>
+                    <h1>Movie Search</h1>
+                </header>
             <div className="container">
                 {movies.map((movieReq) => 
                 <MovieBox key={movieReq} {...movieReq} />)}
             </div>
+            </main>
         );
     }
 
