@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import MovieBox from "./MovieBox";
 
 import '../styles/App.css';
 
@@ -7,12 +8,7 @@ function App() {
 
     const API_URL="https://api.themoviedb.org/3/movie/popular?api_key=ead762915fa943d470035bcf89cf913e";
     const [movies, setMovies] = useState([]);
-
-    useEffect(() => {
-        fetch(API_URL)
-        .then(res => res.json())
-        .then(data => setMovies(data))
-    }, [])
+    const example=["one", "two"];
 
     console.log(movies);
 
@@ -23,6 +19,4 @@ function App() {
         );
     }
 
-
-    /// Comment for test GitHub
 export default App;
