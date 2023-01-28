@@ -1,9 +1,12 @@
 {
   "name": "project_2",
   "version": "1.0.0",
+  "homepage": "https://Alexx2210/github.io/Project_2",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
